@@ -5,13 +5,14 @@ This program reads n and n positive integer numbers (array A)
 and prints minimal number of steps to change array A into array consisting of n ones.
 During one step two adjacent numbers from A (i.e. A[i], A[i+1]) can be chosen and exactly of them can be changed into gcd(A[i], A[i+1]).
 Complexity O(n * logn * log(MAX)), where MAX = max(A[i], i <- (0,n-1))
+Original problem - http://codeforces.com/problemset/problem/891/A
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 
 struct tree {
-	int val = 0;					//Wpisane jest 0, ponieważ gcd(a, 0) = 0 dla każdego a
+	int val = 0;					//Wpisane jest 0, ponieważ gcd(a, 0) = a dla każdego a
 };
 
 int gcd(int a, int b)
