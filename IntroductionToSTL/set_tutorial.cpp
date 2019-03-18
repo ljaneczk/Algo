@@ -16,8 +16,10 @@ Working:
    Then prints minimum and maximum value in S
    Then for each number bi in {b1, b2, ... , bq} prints
         - "YES", if bi is in S, "NO" otherwise
+        - result of count of equal elements in S
         - lower_bound of bi in S
         - upper_bound of bi in S
+   Then performs some other described operations
 */
 
 #include <iostream>
@@ -28,7 +30,7 @@ using namespace std;        // Just for typing cin, cout, set instead of std::ci
 
 int main()
 {
-    uint32_t n, q;
+    size_t n, q;
     cin >> n;
     vector <int> A(n);
     for (int i = 0; i < n; i++)
