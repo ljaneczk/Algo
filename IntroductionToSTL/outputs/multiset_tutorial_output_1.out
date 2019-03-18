@@ -1,0 +1,109 @@
+
+Input:
+n = 8
+A = {3, -3, 1, 3, 5, 3, -1, -1}
+q = 11
+B = {-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6}
+
+Size of set <int> MS: 8
+
+Multiset <int> MS in increasing order:
+-3 -1 -1 1 3 3 3 5
+
+Multiset <int> MS in increasing order with iterators:
+-3 -1 -1 1 3 3 3 5
+
+Multiset <int> MS in decreasing order with reverse iterators:
+5 3 3 3 1 -1 -1 -3
+
+Multiset <int> MS minimum and maximum with iterators:
+Minimum in MS: -3, maximum in MS: 5
+
+Number b = -4 is not in set MS
+Result of MS.count(-4): 0
+Value of lower_bound of number b = -4 is equal to -3
+Value of upper_bound of number b = -4 is equal to -3
+
+Number b = -3 is in set MS
+Result of MS.count(-3): 1
+Value of lower_bound of number b = -3 is equal to -3
+Value of upper_bound of number b = -3 is equal to -1
+
+Number b = -2 is not in set MS
+Result of MS.count(-2): 0
+Value of lower_bound of number b = -2 is equal to -1
+Value of upper_bound of number b = -2 is equal to -1
+
+Number b = -1 is in set MS
+Result of MS.count(-1): 2
+Value of lower_bound of number b = -1 is equal to -1
+Value of upper_bound of number b = -1 is equal to 1
+
+Number b = 0 is not in set MS
+Result of MS.count(0): 0
+Value of lower_bound of number b = 0 is equal to 1
+Value of upper_bound of number b = 0 is equal to 1
+
+Number b = 1 is in set MS
+Result of MS.count(1): 1
+Value of lower_bound of number b = 1 is equal to 1
+Value of upper_bound of number b = 1 is equal to 3
+
+Number b = 2 is not in set MS
+Result of MS.count(2): 0
+Value of lower_bound of number b = 2 is equal to 3
+Value of upper_bound of number b = 2 is equal to 3
+
+Number b = 3 is in set MS
+Result of MS.count(3): 3
+Value of lower_bound of number b = 3 is equal to 3
+Value of upper_bound of number b = 3 is equal to 5
+
+Number b = 4 is not in set MS
+Result of MS.count(4): 0
+Value of lower_bound of number b = 4 is equal to 5
+Value of upper_bound of number b = 4 is equal to 5
+
+Number b = 5 is in set MS
+Result of MS.count(5): 1
+Value of lower_bound of number b = 5 is equal to 5
+Value of upper_bound of number b = 5 is equal to 8
+
+Number b = 6 is not in set MS
+Result of MS.count(6): 0
+Value of lower_bound of number b = 6 is equal to 8
+Value of upper_bound of number b = 6 is equal to 8
+
+Multiset <int> MS:
+-3 -1 -1 1 3 3 3 5
+Multiset <int> MS_copy:
+-3 -1 -1 1 3 3 3 5
+Are MS and MS_copy equal? 1
+Are MS and MS_copy different? 0
+
+Size of MS before clear: 8
+Is MS empty before clear? 0
+Size of MS after clear: 0
+Is MS empty after clear? 1
+Are MS and MS_copy equal? 0
+Are MS and MS_copy different? 1
+
+S before MS.erase(val), where val = 3:
+-3 -1 -1 1 3 3 3 5
+S after MS.erase(val), where val = 3:
+-3 -1 -1 1 5
+
+S before MS.erase(it), where it = MS.begin():
+-3 -1 -1 1 3 3 3 5
+S after MS.erase(it), where it = MS.begin():
+-1 -1 1 3 3 3 5
+
+S before MS.erase(it), where it = lower_bound of 3:
+-3 -1 -1 1 3 3 3 5
+S after MS.erase(it), where it = lower_bound of 3:
+-3 -1 -1 1 3 3 5
+
+S before MS.erase(it1, it2), where it1 = lower_bound of 3 and it2 = lower_bound of 5:
+-3 -1 -1 1 3 3 3 5
+S after MS.erase(it1, it2), where it1 = lower_bound of 3 and it2 = lower_bound of 5:
+-3 -1 -1 1 5
