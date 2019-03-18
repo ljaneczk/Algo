@@ -8,7 +8,7 @@ Input:
     q - number of queries
     b1, b2, ... , bq - n integers
 Working:
-   Program inserts numbers a1, a2, ... , an into set<int> MS
+   Program inserts numbers a1, a2, ... , an into multiset<int> MS
    Then prints MS size
    Then prints numbers from MS in
         - increasing order
@@ -16,8 +16,10 @@ Working:
    Then prints minimum and maximum value in MS
    Then for each number bi in {b1, b2, ... , bq} prints
         - "YES", if bi is in MS, "NO" otherwise
+        - result of count of equal elements in MS
         - lower_bound of bi in MS
         - upper_bound of bi in MS
+   Then performs some other described operations
 */
 
 #include <iostream>
@@ -28,7 +30,7 @@ using namespace std;        // Just for typing cin, cout, set instead of std::ci
 
 int main()
 {
-    uint32_t n, q;
+    size_t n, q;
     cin >> n;
     vector <int> A(n);
     for (int i = 0; i < n; i++)
