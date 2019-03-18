@@ -1,0 +1,109 @@
+
+Input:
+n = 6
+A = {-3, 1, 3, 5, 3, -1}
+q = 11
+B = {-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6}
+
+Size of set <int> S: 5
+
+Set <int> S in increasing order: 
+-3 -1 1 3 5 
+
+Set <int> S in increasing order with iterators: 
+-3 -1 1 3 5 
+
+Set <int> S in decreasing order with reverse iterators: 
+5 3 1 -1 -3 
+
+Set <int> S minimum and maximum with iterators: 
+Minimum in S: -3, maximum in S: 5
+
+Number b = -4 is not in set S
+Result of S.count(-4): 0
+Value of lower_bound of number b = -4 is equal to -3
+Value of upper_bound of number b = -4 is equal to -3
+
+Number b = -3 is in set S
+Result of S.count(-3): 1
+Value of lower_bound of number b = -3 is equal to -3
+Value of upper_bound of number b = -3 is equal to -1
+
+Number b = -2 is not in set S
+Result of S.count(-2): 0
+Value of lower_bound of number b = -2 is equal to -1
+Value of upper_bound of number b = -2 is equal to -1
+
+Number b = -1 is in set S
+Result of S.count(-1): 1
+Value of lower_bound of number b = -1 is equal to -1
+Value of upper_bound of number b = -1 is equal to 1
+
+Number b = 0 is not in set S
+Result of S.count(0): 0
+Value of lower_bound of number b = 0 is equal to 1
+Value of upper_bound of number b = 0 is equal to 1
+
+Number b = 1 is in set S
+Result of S.count(1): 1
+Value of lower_bound of number b = 1 is equal to 1
+Value of upper_bound of number b = 1 is equal to 3
+
+Number b = 2 is not in set S
+Result of S.count(2): 0
+Value of lower_bound of number b = 2 is equal to 3
+Value of upper_bound of number b = 2 is equal to 3
+
+Number b = 3 is in set S
+Result of S.count(3): 1
+Value of lower_bound of number b = 3 is equal to 3
+Value of upper_bound of number b = 3 is equal to 5
+
+Number b = 4 is not in set S
+Result of S.count(4): 0
+Value of lower_bound of number b = 4 is equal to 5
+Value of upper_bound of number b = 4 is equal to 5
+
+Number b = 5 is in set S
+Result of S.count(5): 1
+Value of lower_bound of number b = 5 is equal to 5
+Value of upper_bound of number b = 5 is equal to 5
+
+Number b = 6 is not in set S
+Result of S.count(6): 0
+Value of lower_bound of number b = 6 is equal to 5
+Value of upper_bound of number b = 6 is equal to 5
+
+Set <int> S: 
+-3 -1 1 3 5 
+Set <int> S_copy: 
+-3 -1 1 3 5 
+Are S and S_copy equal? 1
+Are S and S_copy different? 0
+
+Size of S before clear: 5
+Is S empty before clear? 0
+Size of S after clear: 0
+Is S empty after clear? 1
+Are S and S_copy equal? 0
+Are S and S_copy different? 1
+
+S before S.erase(val), where val = -1: 
+-3 -1 1 3 5 
+S after S.erase(val), where val = -1: 
+-3 1 3 5 
+
+S before S.erase(it), where it = S.begin(): 
+-3 -1 1 3 5 
+S after S.erase(it), where it = S.begin(): 
+-1 1 3 5 
+
+S before S.erase(it), where it = lower_bound of -1: 
+-3 -1 1 3 5 
+S after S.erase(it), where it = lower_bound of -1: 
+-3 1 3 5 
+
+S before S.erase(it1, it2), where it1 = lower_bound of -1 and it2 = lower_bound of 3: 
+-3 -1 1 3 5 
+S after S.erase(it1, it2), where it1 = lower_bound of -1 and it2 = lower_bound of 3: 
+-3 3 5 
